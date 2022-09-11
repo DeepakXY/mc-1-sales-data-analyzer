@@ -1,9 +1,5 @@
 package com.jap.sales;
 
-import com.jap.sales.AmountComparator;
-import com.jap.sales.SalesDataAnalyzer;
-import com.jap.sales.SalesRecord;
-import com.jap.sales.TimeOnSiteComparator;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -50,6 +46,6 @@ public class SalesDataAnalyzerTest {
     public void givenSalesDetailsGetTopCustomerWhoSpentMaxTimeOnSite(){
         List<SalesRecord> output = salesDataAnalyzer.readFile(fileName);
         SalesRecord salesRecord = salesDataAnalyzer.getTopCustomerWhoSpentMaxTimeOnSite(output,new TimeOnSiteComparator());
-        assertEquals(169.2,salesRecord.getTime_on_site(),0);
+        assertEquals(169.2, salesRecord.getTimeOnSite(), 0);
     }
 }
